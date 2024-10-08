@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/vintage_bg3"
+    tools:context=".Light_custom">
+
+    <ImageButton
+        android:id="@+id/back_btn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:padding="0dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/back_btn"
+        android:scaleType="centerInside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/top_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:src="@drawable/just_de_light"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/top_line_bot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:src="@drawable/line_img"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_box"/>
+
+    <LinearLayout
+        android:id="@+id/second_box"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_box">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/building_txt"/>
+
+        <Switch
+            android:id="@+id/switch_building"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:track="@drawable/switch_bg"
+            android:thumb="@drawable/serkel"
+            android:scaleX="1.3"
+            android:scaleY="1.3"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/line_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:src="@drawable/line_img"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/second_box"/>
+
+    <ImageView
+        android:id="@+id/mode_text"
+        android:layout_width="100dp"
+        android:layout_height="15dp"
+        android:src="@drawable/mode_txt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line_top"/>
+
+    <LinearLayout
+        android:id="@+id/id_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mode_text">
+
+        <ImageButton
+            android:id="@+id/standard_m"
+            android:src="@drawable/unlit_bulb"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:enabled="false"
+            android:layout_width="60dp"
+            android:layout_height="60dp"/>
+
+        <ImageButton
+            android:id="@+id/flickery_m"
+            android:src="@drawable/unlit_bulb"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:enabled="false"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"/>
+
+        <ImageButton
+            android:id="@+id/wave_m"
+            android:src="@drawable/unlit_bulb"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:enabled="false"
+            android:layout_width="60dp"
+            android:layout_height="60dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mode_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/id_container">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:src="@drawable/standard_txt"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"/>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ficker_txt"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"/>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:src="@drawable/wave_txt"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"/>
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/thin_layn"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:src="@drawable/thin_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mode_box"/>
+
+    <ImageView
+        android:id="@+id/color_text"
+        android:layout_width="100dp"
+        android:layout_height="15dp"
+        android:src="@drawable/color_txt"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/thin_layn"/>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:id="@+id/color_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/color_text">
+
+        <ImageButton
+            android:id="@+id/building_color1"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/white_serkel_kolor"
+            android:scaleType="fitXY"
+            android:background="@android:color/transparent"
+            android:enabled="false"/>
+
+        <ImageButton
+            android:id="@+id/building_color2"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/mountain_dewrabels"
+            android:scaleType="fitXY"
+            android:background="@android:color/transparent"
+            android:enabled="false"
+            android:layout_marginStart="20dp"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/line_bot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:src="@drawable/line_img"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/color_container"/>
+
+    <LinearLayout
+        android:id="@+id/fountain_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line_bot">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/fountain_txt"/>
+
+        <Switch
+            android:id="@+id/switch_fountain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:track="@drawable/switch_bg"
+            android:thumb="@drawable/serkel"
+            android:scaleX="1.3"
+            android:scaleY="1.3"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/line_fount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:src="@drawable/line_img"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fountain_box"/>
+
+
+    <LinearLayout
+        android:id="@+id/fountain_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mode_text_f">
+
+        <ImageButton
+            android:id="@+id/fstandard_m"
+            android:src="@drawable/unlit_bulb"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:enabled="false"
+            android:layout_width="60dp"
+            android:layout_height="60dp"/>
+
+        <ImageButton
+            android:id="@+id/fflickery_m"
+            android:src="@drawable/unlit_bulb"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:enabled="false"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"/>
+
+        <ImageButton
+            android:id="@+id/fwave_m"
+            android:src="@drawable/unlit_bulb"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:enabled="false"
+            android:layout_width="60dp"
+            android:layout_height="60dp"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/mode_text_f"
+        android:layout_width="100dp"
+        android:layout_height="15dp"
+        android:src="@drawable/mode_txt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line_fount"/>
+
+    <LinearLayout
+        android:id="@+id/fountain_mode_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fountain_container">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:src="@drawable/standard_txt"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"/>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ficker_txt"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"/>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:src="@drawable/wave_txt"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/thinn_layn"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:src="@drawable/thin_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fountain_mode_box"/>
+
+    <ImageView
+        android:id="@+id/color_text_fountain"
+        android:layout_width="100dp"
+        android:layout_height="15dp"
+        android:src="@drawable/color_txt"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/thinn_layn"/>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:id="@+id/f_color_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/color_text_fountain">
+
+        <ImageButton
+            android:id="@+id/fountain_color1"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/white_serkel_kolor"
+            android:scaleType="fitXY"
+            android:background="@android:color/transparent"
+            android:enabled="false"/>
+
+        <ImageButton
+            android:id="@+id/fountain_color2"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/mountain_dewrabels"
+            android:scaleType="fitXY"
+            android:background="@android:color/transparent"
+            android:enabled="false"
+            android:layout_marginStart="20dp"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

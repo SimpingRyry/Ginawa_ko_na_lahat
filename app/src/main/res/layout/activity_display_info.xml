@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/vintage_bg3"
+    tools:context=".Display_info">
+
+    <ImageButton
+        android:id="@+id/about_back_btn"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:padding="50dp"
+
+        android:background="@android:color/transparent"
+        android:src="@drawable/back_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_marginTop="30dp"
+        android:layout_width="200dp"
+        android:layout_height="20dp"
+        android:src="@drawable/display_txt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="320dp"
+        android:layout_height="500dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@drawable/cardview"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageView
+                android:layout_marginStart="25dp"
+                android:layout_width="150dp"
+                android:layout_height="90dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/temp_ico_txt"/>
+
+            <TextView
+                android:layout_marginStart="10dp"
+                android:id="@+id/temperature_txt"
+                android:layout_width="200dp"
+                android:layout_gravity="center"
+                android:layout_height="40dp"
+                android:text="100°"
+                android:backgroundTint="@color/black"
+                android:fontFamily="@font/jacquesfrancois"
+                android:textSize="30dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageView
+                android:layout_marginStart="25dp"
+                android:layout_width="150dp"
+                android:layout_height="80dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/humidityy"/>
+
+            <TextView
+                android:layout_marginStart="10dp"
+                android:id="@+id/humidity_txt"
+                android:layout_width="200dp"
+                android:layout_gravity="center"
+                android:layout_height="40dp"
+                android:text="100°"
+                android:backgroundTint="@color/black"
+                android:fontFamily="@font/jacquesfrancois"
+                android:textSize="30dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageView
+                android:layout_marginStart="25dp"
+                android:layout_width="150dp"
+                android:layout_height="80dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/eyr"/>
+
+            <TextView
+                android:layout_marginStart="10dp"
+                android:id="@+id/air_txt"
+                android:layout_width="200dp"
+                android:layout_gravity="center"
+                android:layout_height="40dp"
+                android:text="100°"
+                android:backgroundTint="@color/black"
+                android:fontFamily="@font/jacquesfrancois"
+                android:textSize="30dp"/>
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
