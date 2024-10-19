@@ -10,8 +10,8 @@
 
     <ImageButton
         android:id="@+id/back_btn"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_marginTop="10dp"
         android:layout_marginStart="10dp"
         android:padding="0dp"
@@ -33,7 +33,7 @@
         <ImageView
             android:layout_marginTop="5dp"
             android:layout_width="match_parent"
-            android:layout_height="160dp"
+            android:layout_height="150dp"
             android:src="@drawable/just_de_light"/>
 
     </LinearLayout>
@@ -41,7 +41,7 @@
     <ImageView
         android:id="@+id/top_line_bot"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="5dp"
 
         android:src="@drawable/line_img"
         app:layout_constraintEnd_toEndOf="parent"
@@ -78,32 +78,73 @@
     <ImageView
         android:id="@+id/line_top"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
+        android:layout_height="5dp"
         android:src="@drawable/line_img"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/second_box"/>
 
     <ImageView
-        android:id="@+id/mode_text"
-        android:layout_width="100dp"
-        android:layout_height="15dp"
-        android:src="@drawable/mode_txt"
+        android:layout_width="7dp"
+        android:scaleType="fitXY"
+        android:layout_height="119dp"
+        android:src="@drawable/vertical_line"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/line_top"/>
 
     <LinearLayout
-        android:id="@+id/id_container"
+        android:layout_marginTop="5dp"
+        android:id="@+id/first_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/mode_text">
+        app:layout_constraintTop_toBottomOf="@id/line_top">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageView
+                android:id="@+id/first_mode_txt"
+                android:layout_width="70dp"
+                android:layout_height="15dp"
+                android:src="@drawable/mode_txt" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/first_color_txt"
+                android:layout_width="70dp"
+                android:layout_height="15dp"
+                android:src="@drawable/color_txt" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/first_main_box"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/first_container">
 
         <ImageButton
+            android:layout_marginTop="10dp"
             android:id="@+id/standard_m"
             android:src="@drawable/unlit_bulb"
             android:scaleType="fitCenter"
@@ -114,6 +155,7 @@
             android:layout_height="60dp"/>
 
         <ImageButton
+            android:layout_marginTop="10dp"
             android:id="@+id/flickery_m"
             android:src="@drawable/unlit_bulb"
             android:scaleType="fitCenter"
@@ -121,11 +163,10 @@
             android:background="@android:color/transparent"
             android:enabled="false"
             android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"/>
+            android:layout_height="60dp"/>
 
         <ImageButton
+            android:layout_marginTop="10dp"
             android:id="@+id/wave_m"
             android:src="@drawable/unlit_bulb"
             android:scaleType="fitCenter"
@@ -135,16 +176,47 @@
             android:layout_width="60dp"
             android:layout_height="60dp"/>
 
+        <LinearLayout
+            android:layout_marginStart="30dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="70dp">
+
+            <ImageButton
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center"
+                android:id="@+id/building_color1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/white_serkel_kolor"
+                android:scaleType="fitXY"
+                android:background="@android:color/transparent"
+                android:enabled="false"/>
+
+            <ImageButton
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center"
+                android:id="@+id/building_color2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/mountain_dewrabels"
+                android:scaleType="fitXY"
+                android:background="@android:color/transparent"
+                android:enabled="false"
+                android:layout_marginStart="20dp"/>
+
+        </LinearLayout>
+
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/mode_box"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
         android:gravity="center"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/id_container">
+        app:layout_constraintTop_toBottomOf="@id/first_main_box">
 
         <ImageView
             android:layout_width="60dp"
@@ -155,18 +227,20 @@
             android:background="@android:color/transparent"/>
 
         <ImageView
-            android:layout_width="60dp"
+
+            android:layout_width="45dp"
             android:layout_height="30dp"
             android:src="@drawable/ficker_txt"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="10dp"
             android:scaleType="fitCenter"
             android:adjustViewBounds="true"
             android:background="@android:color/transparent"/>
 
         <ImageView
-            android:layout_width="60dp"
+            android:layout_width="40dp"
             android:layout_height="30dp"
+            android:layout_marginStart="5dp"
             android:src="@drawable/wave_txt"
             android:scaleType="fitCenter"
             android:adjustViewBounds="true"
@@ -176,64 +250,14 @@
     </LinearLayout>
 
     <ImageView
-        android:id="@+id/thin_layn"
-        android:layout_width="match_parent"
-        android:layout_height="10dp"
-        android:src="@drawable/thin_line"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/mode_box"/>
-
-    <ImageView
-        android:id="@+id/color_text"
-        android:layout_width="100dp"
-        android:layout_height="15dp"
-        android:src="@drawable/color_txt"
-        android:layout_marginTop="5dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/thin_layn"/>
-
-    <LinearLayout
-        android:layout_marginTop="10dp"
-        android:id="@+id/color_container"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/color_text">
-
-        <ImageButton
-            android:id="@+id/building_color1"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/white_serkel_kolor"
-            android:scaleType="fitXY"
-            android:background="@android:color/transparent"
-            android:enabled="false"/>
-
-        <ImageButton
-            android:id="@+id/building_color2"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/mountain_dewrabels"
-            android:scaleType="fitXY"
-            android:background="@android:color/transparent"
-            android:enabled="false"
-            android:layout_marginStart="20dp"/>
-
-    </LinearLayout>
-
-    <ImageView
         android:id="@+id/line_bot"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="5dp"
 
         android:src="@drawable/line_img"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/color_container"/>
+        app:layout_constraintTop_toBottomOf="@id/mode_box"/>
 
     <LinearLayout
         android:id="@+id/fountain_box"
@@ -264,24 +288,72 @@
     <ImageView
         android:id="@+id/line_fount"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
+        android:layout_height="5dp"
         android:src="@drawable/line_img"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/fountain_box"/>
 
+    <ImageView
+        android:layout_width="7dp"
+        android:scaleType="fitXY"
+        android:layout_height="119dp"
+        android:src="@drawable/vertical_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line_fount"/>
+
 
     <LinearLayout
-        android:id="@+id/fountain_container"
+        android:layout_marginTop="5dp"
+        android:id="@+id/second_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/mode_text_f">
+        app:layout_constraintTop_toBottomOf="@id/line_fount">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="15dp"
+                android:src="@drawable/mode_txt" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="15dp"
+                android:src="@drawable/color_txt" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/second_main_box"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/second_container">
 
         <ImageButton
+            android:layout_marginTop="10dp"
             android:id="@+id/fstandard_m"
             android:src="@drawable/unlit_bulb"
             android:scaleType="fitCenter"
@@ -292,6 +364,7 @@
             android:layout_height="60dp"/>
 
         <ImageButton
+            android:layout_marginTop="10dp"
             android:id="@+id/fflickery_m"
             android:src="@drawable/unlit_bulb"
             android:scaleType="fitCenter"
@@ -299,11 +372,10 @@
             android:background="@android:color/transparent"
             android:enabled="false"
             android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"/>
+            android:layout_height="60dp"/>
 
         <ImageButton
+            android:layout_marginTop="10dp"
             android:id="@+id/fwave_m"
             android:src="@drawable/unlit_bulb"
             android:scaleType="fitCenter"
@@ -313,25 +385,47 @@
             android:layout_width="60dp"
             android:layout_height="60dp"/>
 
+        <LinearLayout
+            android:layout_marginStart="30dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="70dp">
+
+            <ImageButton
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center"
+                android:id="@+id/fountain_color1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/white_serkel_kolor"
+                android:scaleType="fitXY"
+                android:background="@android:color/transparent"
+                android:enabled="false"/>
+
+            <ImageButton
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center"
+                android:id="@+id/fountain_color2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/mountain_dewrabels"
+                android:scaleType="fitXY"
+                android:background="@android:color/transparent"
+                android:enabled="false"
+                android:layout_marginStart="20dp"/>
+
+        </LinearLayout>
+
     </LinearLayout>
 
-    <ImageView
-        android:id="@+id/mode_text_f"
-        android:layout_width="100dp"
-        android:layout_height="15dp"
-        android:src="@drawable/mode_txt"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/line_fount"/>
-
     <LinearLayout
-        android:id="@+id/fountain_mode_box"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:id="@+id/second_mode_box"
+        android:layout_marginStart="5dp"
         android:gravity="center"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/fountain_container">
+        app:layout_constraintTop_toBottomOf="@id/second_main_box">
 
         <ImageView
             android:layout_width="60dp"
@@ -342,73 +436,244 @@
             android:background="@android:color/transparent"/>
 
         <ImageView
-            android:layout_width="60dp"
+
+            android:layout_width="45dp"
             android:layout_height="30dp"
             android:src="@drawable/ficker_txt"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="10dp"
             android:scaleType="fitCenter"
             android:adjustViewBounds="true"
             android:background="@android:color/transparent"/>
 
         <ImageView
-            android:layout_width="60dp"
+            android:layout_width="40dp"
             android:layout_height="30dp"
+            android:layout_marginStart="5dp"
             android:src="@drawable/wave_txt"
             android:scaleType="fitCenter"
             android:adjustViewBounds="true"
             android:background="@android:color/transparent"/>
 
+
     </LinearLayout>
 
     <ImageView
-        android:id="@+id/thinn_layn"
+        android:id="@+id/line_lasty"
         android:layout_width="match_parent"
-        android:layout_height="10dp"
-        android:src="@drawable/thin_line"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/fountain_mode_box"/>
+        android:layout_height="5dp"
 
-    <ImageView
-        android:id="@+id/color_text_fountain"
-        android:layout_width="100dp"
-        android:layout_height="15dp"
-        android:src="@drawable/color_txt"
-        android:layout_marginTop="10dp"
+        android:src="@drawable/line_img"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/thinn_layn"/>
+        app:layout_constraintTop_toBottomOf="@id/second_mode_box"/>
 
     <LinearLayout
-        android:layout_marginTop="10dp"
-        android:id="@+id/f_color_container"
+
+        android:id="@+id/last_box"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/color_text_fountain">
+        app:layout_constraintTop_toBottomOf="@id/line_lasty">
 
-        <ImageButton
-            android:id="@+id/fountain_color1"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/white_serkel_kolor"
-            android:scaleType="fitXY"
-            android:background="@android:color/transparent"
-            android:enabled="false"/>
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/out_door_txt"/>
 
-        <ImageButton
-            android:id="@+id/fountain_color2"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/mountain_dewrabels"
-            android:scaleType="fitXY"
-            android:background="@android:color/transparent"
-            android:enabled="false"
-            android:layout_marginStart="20dp"/>
+        <Switch
+            android:id="@+id/switch_outdoor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:track="@drawable/switch_bg"
+            android:thumb="@drawable/serkel"
+            android:scaleX="1.3"
+            android:scaleY="1.3"/>
 
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/line_last"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:src="@drawable/line_img"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/last_box"/>
+
+    <LinearLayout
+        android:id="@+id/last_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line_last">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageView
+                android:id="@+id/last_mode_txt"
+                android:layout_width="70dp"
+                android:layout_height="15dp"
+                android:src="@drawable/mode_txt" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/last_color_txt"
+                android:layout_width="70dp"
+                android:layout_height="15dp"
+                android:src="@drawable/color_txt" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="7dp"
+        android:scaleType="fitXY"
+        android:layout_height="119dp"
+        android:src="@drawable/vertical_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line_last"/>
+
+    <LinearLayout
+        android:id="@+id/third_containerr"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/last_container">
+
+        <ImageButton
+            android:layout_marginTop="10dp"
+            android:id="@+id/standard_o"
+            android:src="@drawable/unlit_bulb"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:enabled="false"
+            android:layout_width="60dp"
+            android:layout_height="60dp"/>
+
+        <ImageButton
+            android:layout_marginTop="10dp"
+            android:id="@+id/flickery_o"
+            android:src="@drawable/unlit_bulb"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:enabled="false"
+            android:layout_width="60dp"
+            android:layout_height="60dp"/>
+
+        <ImageButton
+            android:layout_marginTop="10dp"
+            android:id="@+id/wave_o"
+            android:src="@drawable/unlit_bulb"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:enabled="false"
+            android:layout_width="60dp"
+            android:layout_height="60dp"/>
+
+        <LinearLayout
+            android:layout_marginStart="30dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="70dp">
+
+            <ImageButton
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center"
+                android:id="@+id/outdoor_color1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/white_serkel_kolor"
+                android:scaleType="fitXY"
+                android:background="@android:color/transparent"
+                android:enabled="false"/>
+
+            <ImageButton
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center"
+                android:id="@+id/outdoor_color2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/mountain_dewrabels"
+                android:scaleType="fitXY"
+                android:background="@android:color/transparent"
+                android:enabled="false"
+                android:layout_marginStart="20dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/thired_mode_box"
+        android:layout_marginStart="5dp"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/third_containerr">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:src="@drawable/standard_txt"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"/>
+
+        <ImageView
+
+            android:layout_width="45dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ficker_txt"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="10dp"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"/>
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="5dp"
+            android:src="@drawable/wave_txt"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"/>
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:src="@drawable/thin_line"
+        app:layout_constraintTop_toBottomOf="@id/thired_mode_box"
+        />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

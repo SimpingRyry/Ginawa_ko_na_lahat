@@ -9,119 +9,147 @@
     tools:context=".Display_info">
 
     <ImageButton
-        android:id="@+id/about_back_btn"
-        android:layout_width="70dp"
-        android:layout_height="40dp"
-        android:scaleType="fitCenter"
-        android:adjustViewBounds="true"
+        android:id="@+id/display_back_btn"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_marginTop="10dp"
         android:layout_marginStart="10dp"
-        android:padding="50dp"
-
+        android:padding="0dp"
         android:background="@android:color/transparent"
         android:src="@drawable/back_btn"
+        android:scaleType="centerInside"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:layout_marginTop="30dp"
+        android:id="@+id/imageView"
         android:layout_width="200dp"
         android:layout_height="20dp"
+        android:layout_marginTop="30dp"
         android:src="@drawable/display_txt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="320dp"
-        android:layout_height="500dp"
-        android:orientation="vertical"
-        android:gravity="center"
+        android:layout_height="400dp"
+        android:layout_marginBottom="100dp"
         android:background="@drawable/cardview"
+        android:gravity="center"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            >
+            android:layout_height="wrap_content">
 
             <ImageView
-                android:layout_marginStart="25dp"
                 android:layout_width="150dp"
                 android:layout_height="90dp"
+                android:layout_marginStart="25dp"
                 android:scaleType="fitCenter"
-                android:src="@drawable/temp_ico_txt"/>
+                android:src="@drawable/temp_ico_txt" />
 
             <TextView
-                android:layout_marginStart="10dp"
                 android:id="@+id/temperature_txt"
                 android:layout_width="200dp"
-                android:layout_gravity="center"
                 android:layout_height="40dp"
-                android:text="100°"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
                 android:backgroundTint="@color/black"
                 android:fontFamily="@font/jacquesfrancois"
-                android:textSize="30dp"/>
+                android:text="100°"
+                android:textSize="30dp" />
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_marginTop="40dp"
-            android:layout_marginBottom="40dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            >
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="40dp">
 
             <ImageView
-                android:layout_marginStart="25dp"
                 android:layout_width="150dp"
                 android:layout_height="80dp"
+                android:layout_marginStart="25dp"
                 android:scaleType="fitCenter"
-                android:src="@drawable/humidityy"/>
+                android:src="@drawable/humidityy" />
 
             <TextView
-                android:layout_marginStart="10dp"
                 android:id="@+id/humidity_txt"
                 android:layout_width="200dp"
-                android:layout_gravity="center"
                 android:layout_height="40dp"
-                android:text="100°"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
                 android:backgroundTint="@color/black"
                 android:fontFamily="@font/jacquesfrancois"
-                android:textSize="30dp"/>
+                android:text="100°"
+                android:textSize="30dp" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            >
+            android:layout_height="wrap_content">
 
             <ImageView
-                android:layout_marginStart="25dp"
                 android:layout_width="150dp"
                 android:layout_height="80dp"
+                android:layout_marginStart="25dp"
                 android:scaleType="fitCenter"
-                android:src="@drawable/eyr"/>
+                android:src="@drawable/eyr" />
 
             <TextView
-                android:layout_marginStart="10dp"
                 android:id="@+id/air_txt"
                 android:layout_width="200dp"
-                android:layout_gravity="center"
                 android:layout_height="40dp"
-                android:text="100°"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
                 android:backgroundTint="@color/black"
                 android:fontFamily="@font/jacquesfrancois"
-                android:textSize="30dp"/>
+                android:text="100°"
+                android:textSize="30dp" />
 
         </LinearLayout>
 
+    </LinearLayout>
 
+    <LinearLayout
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" >
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:backgroundTint="@color/black"
+            android:fontFamily="@font/jacquesfrancois"
+            android:text="FOUNTAIN :"
+            android:gravity="center"
+            android:textSize="20dp"/>
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:src="@drawable/water_pump_img"/>
+
+        <Switch
+            android:layout_marginStart="5dp"
+            android:id="@+id/switch_water_pump"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:track="@drawable/switch_bg"
+            android:thumb="@drawable/serkel"
+            android:scaleX="1.3"
+            android:scaleY="1.3"/>
 
     </LinearLayout>
 
